@@ -25,7 +25,7 @@
     a:hover {
       text-decoration: underline;
     }
-    /* Grid gallery */
+    /* Simple grid gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -36,32 +36,6 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .gallery img:hover {
-      transform: scale(1.02);
-    }
-    /* Lightbox styles */
-    .lightbox {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.85);
-      justify-content: center;
-      align-items: center;
-    }
-    .lightbox img {
-      max-width: 90%;
-      max-height: 90%;
-      border-radius: 8px;
-    }
-    .lightbox:target {
-      display: flex;
     }
   </style>
 </head>
@@ -70,12 +44,10 @@
   <p><a href="index.html">← Back to Home</a></p>
 
   <div class="gallery">
-    <a href="#img1"><img src="photos/photo1.jpeg" alt="Description of photo 1"></a>
-    <a href="#img2"><img src="photos/photo2.jpeg" alt="Description of photo 2"></a>
-    <a href="#img3"><img src="photos/photo3.jpeg" alt="Description of photo 3"></a>
-     <a href="#img3"><img src="photos/photo4.jpeg" alt="Description of photo 3"></a>
+    <img src="photos/photo1.jpeg" alt="Description of photo 1">
+    <img src="photos/photo2.jpeg" alt="Description of photo 2">
+    <img src="photos/photo3.jpeg" alt="Description of photo 3">
+    <img src="photos/photo4.jpeg" alt="Description of photo 4">
   </div>
-
-
 </body>
 </html>

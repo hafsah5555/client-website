@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Md Sadman Faruque</title>
-  <meta name="description" content="Client Name — Personal Academic Website" />
+  <meta name="description" content="Md Sadman Faruque — Personal Academic Website" />
   <style>
     :root {
       --fg: #111;
@@ -30,23 +30,52 @@
     li + li { margin-top: 0.6rem; }
     hr { border: 0; border-top: 1px solid #ddd; margin: 1.5rem 0; }
     .contact { margin-top: 0.5rem; }
+
+    /* Head section layout */
+    .head {
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+    }
+    .head img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    @media (max-width: 600px) {
+      .head {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .head img {
+        margin-bottom: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
   <main>
-    <h1>Md Sadman Faruque</h1>
-    <p><strong>Ph.D. Candidate in Computational Mechanics</strong>, Mechanical Engineering Department, University of Michigan.</p>
-    <p class="contact">
-      <a href="#">CV</a> ·
-      <a href="https://scholar.google.com/citations?user=DVyr-gkAAAAJ&hl=en&oi=ao">Google Scholar</a> ·
-      <a href="https://www.linkedin.com/in/md-sadman-faruque/">LinkedIn</a> ·
-      <a href="#">Twitter</a> ·
-      <span class="muted">sadmanfaruque.mist@gmail.com</span>
-    </p>
+    <!-- Top section with image + bio -->
+    <div class="head">
+      <img src="sadman.jpg" alt="Md Sadman Faruque" />
+      <div>
+        <h1>Md Sadman Faruque</h1>
+        <p><strong>Ph.D. Candidate in Computational Mechanics</strong>, Mechanical Engineering Department, University of Michigan.</p>
+        <p class="contact">
+          <a href="#">CV</a> ·
+          <a href="https://scholar.google.com/citations?user=DVyr-gkAAAAJ&hl=en&oi=ao">Google Scholar</a> ·
+          <a href="https://www.linkedin.com/in/md-sadman-faruque/">LinkedIn</a> ·
+          <a href="#">Twitter</a> ·
+          <span class="muted">sadmanfaruque.mist@gmail.com</span>
+        </p>
+      </div>
+    </div>
 
     <p class="muted">
-      I study [research focus here] with an emphasis on [topic area].
-      My work spans [brief description].
+      I study computational modeling of complex materials, with an emphasis on multiscale simulation and structural analysis.
+      My work spans numerical methods, finite element modeling, and high-performance computing.
     </p>
 
     <hr />
@@ -64,7 +93,6 @@
     </ul>
 
     <hr />
-
     <p class="muted">Last updated: August 10, 2025</p>
   </main>
 </body>

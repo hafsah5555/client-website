@@ -12,6 +12,7 @@
       max-width: 1000px;
       line-height: 1.6;
       color: #111;
+      background-color: #fff;
     }
     h1 {
       font-size: 2rem;
@@ -24,6 +25,7 @@
     a:hover {
       text-decoration: underline;
     }
+    /* Grid gallery */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -34,6 +36,32 @@
       height: auto;
       border-radius: 8px;
       object-fit: cover;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.02);
+    }
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.85);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+    .lightbox:target {
+      display: flex;
     }
   </style>
 </head>
@@ -42,10 +70,20 @@
   <p><a href="index.html">← Back to Home</a></p>
 
   <div class="gallery">
-    <img src="photos/photo1.png" alt="Description of photo 1">
-    <img src="photos/photo2.jpg" alt="Description of photo 2">
-    <img src="photos/photo3.jpg" alt="Description of photo 3">
-    <!-- Add more images as needed -->
+    <a href="#img1"><img src="photos/photo1.png" alt="Description of photo 1"></a>
+    <a href="#img2"><img src="photos/photo2.jpg" alt="Description of photo 2"></a>
+    <a href="#img3"><img src="photos/photo3.jpg" alt="Description of photo 3"></a>
+  </div>
+
+  <!-- Lightbox images -->
+  <div class="lightbox" id="img1">
+    <a href="#"><img src="photos/photo1.jpg" alt="Description of photo 1"></a>
+  </div>
+  <div class="lightbox" id="img2">
+    <a href="#"><img src="photos/photo2.jpg" alt="Description of photo 2"></a>
+  </div>
+  <div class="lightbox" id="img3">
+    <a href="#"><img src="photos/photo3.jpg" alt="Description of photo 3"></a>
   </div>
 </body>
 </html>
